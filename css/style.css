@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@700&display=swap');
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: rgb(255, 255, 255);
+    color: rgb(104, 104, 115);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Exo 2', sans-serif;
+    color: #111;
+}
+
+.calc-block {
+    background-color: #fff;
+    box-shadow: 0 5px 40px -20px rgb(168, 175, 222);
+    border-radius: 0px 20px 20px 0;
+    border: 1px solid rgb(248, 250, 255);
+    padding: 30px;
+}
+
+.form-control {
+    border-radius: 10px;
+    color: #3b4a9d;
+    border: 1px solid rgb(241, 245, 253);
+}
+
+.dengi {
+    background: url('../img/dengi.jpg') top center;
+    background-size: cover;
+    
+}
+
+#range {
+    position: relative;
+}
+
+#rangeSummaMin {
+    position: absolute;
+    top: 30px;
+    left: 0px;
+    font-size: 12px;
+    color: rgb(165, 185, 199);
+}
+
+#rangeSummaMax {
+    position: absolute;
+    top: 30px;
+    right: 0px;
+    font-size: 12px;
+    color: rgb(165, 185, 199);
+}
+
+#rangeSrokMin {
+    position: absolute;
+    top: 30px;
+    left: 0px;
+    font-size: 12px;
+    color: rgb(165, 185, 199);
+}
+
+#rangeSrokMax {
+    position: absolute;
+    top: 30px;
+    right: 0px;
+    font-size: 12px;
+    color: rgb(165, 185, 199);
+}
+
+#dohodMin {
+    position: absolute;
+    top: 30px;
+    left: 0px;
+    font-size: 12px;
+    color: rgb(165, 185, 199);
+}
+
+#dohodMax {
+    position: absolute;
+    top: 30px;
+    right: 0px;
+    font-size: 12px;
+    color: rgb(165, 185, 199);
+}
+
+hr {
+    color: rgb(215, 215, 215);
+}
+
+.btn-ok {
+    background: #3b4a9d;
+    color: #fff;
+    padding: 12px 0 12px 0;
+    border-radius: 8px;
+}
+
+.btn-ok:hover {
+    background: #3b4a9d;
+    color: #fff;
+}
+
+#pereplata, #summaPlateza, label {
+    color: #3b4a9d;
+}
+
+.green {
+    color: rgb(34, 193, 97);
+}
+
+.yellow {
+    color: rgb(255, 191, 0);
+}
+
+.red {
+    color: rgb(255, 66, 66);
+}
+
+li {
+    margin-top: 20px;
+}
+
+footer {
+    background-color: #1f2124;
+    margin-top: 40px;
+}

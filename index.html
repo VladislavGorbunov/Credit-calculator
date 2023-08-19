@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>Кредитный калькулятор онлайн. Расчёт ежемесячного платежа по
+            кредиту</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+            crossorigin="anonymous">
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+            crossorigin="anonymous"></script>
+
+            <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+
+
+        <header class="p-3 bg-dark text-white">
+            <div class="container">
+                <div
+                    class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                    <a href="/"
+                        class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                        КРЕДИТНЫЙ КАЛЬКУЛЯТОР
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <div class="container mt-4">
+            <h1 class="text-center">Кредитный калькулятор онлайн</h1>
+
+            <p class="text-center mb-5 col-lg-8 mx-auto">С помощью нашего онлайн
+                калькулятора Вы можете рассчитать ежемесячный платёж по кредиту.
+                Это позволит Вам предварительно оценить свои финансовые
+                возможности по своевременному обеспечению платежей по кредиту.
+            </p>
+            <div class="row">
+                <div class="col-lg-6 dengi"></div>
+
+                <div class="col-lg-6 col-12 calc-block mb-2">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <label class="form-label"><b>Сумма кредита (руб.)</b></label>
+                            <input class="summa form-control form-control-lg"
+                                id="summaInput" type="number" min="10000"
+                                max="100000" step="500" value="10000">
+                            <div id="range">
+                                <input type="range" class="form-range mt-2"
+                                    id="summaRange" step="500">
+                                <span id="rangeSummaMin">0</span>
+                                <span id="rangeSummaMax">0</span>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <label class="form-label"><b>Срок кредита (месяцев)</b></label>
+                            <input class="summa form-control form-control-lg"
+                                id="srokInput" type="number" step="1" value="6">
+                            <div id="range">
+                                <input type="range" class="form-range mt-2"
+                                    id="srokRange" step="1">
+                                <span id="rangeSrokMin">0</span>
+                                <span id="rangeSrokMax">0</span>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 mt-4">
+                            <label class="form-label"><b>Процентная ставка банка
+                                    %</b></label>
+                            <input class="form-control form-control-lg"
+                                id="procentStavkaInput" type="number" min="1"
+                                max="50" step="0.1" value="10">
+                            <!-- <label class="form-label"><b>Процентная ставка:</b> <span id="procentStavkaText">10</span>% годовых</label> -->
+                        </div>
+
+                        <div class="col-lg-6 mt-4">
+                            <label class="form-label"><b>Ваш уровень дохода
+                                    (руб./мес.)</b></label>
+                            <input class="form-control form-control-lg"
+                                id="dohodInput" type="number" min="10000"
+                                max="250000" step="500" value="10000">
+                            <div id="range">
+                                <input type="range" class="form-range mt-2"
+                                    id="dohodRange" step="1">
+                                <span id="dohodMin">0</span>
+                                <span id="dohodMax">0</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <h5 class="text-center mt-4">Итоги расчёта:</h5>
+                    Ежемесячный платеж: <b><span id="summaPlateza">0</span></b>
+                    рублей <hr>
+                    Переплата по кредиту составит: <b><span id="pereplata">0</span></b>
+                    рублей<hr>
+                    Вероятнось одобрения: <b><span id="odobrenie">-</span></b><br>
+                    <a href
+                        class="btn btn-ok mt-4 mb-3 d-block mx-auto col-lg-4">Выбрать
+                        банк</a>
+                    <small>* данный расчёт является предварительным и зависит от
+                        условий конкретного банка.</small>
+                </div>
+
+            </div><div>
+
+                <h2 class="text-center mt-5">От чего зависит кредитная ставка?</h2>
+                <p class="text-center">Самым важным параметро при расчёте
+                    потребительского кредита является процентная ставка, которая
+                    измеряется в процентах годовых.
+                    Процентная ставка показывает, сколько процентов будет
+                    начислено на сумму задолженности за один год пользования
+                    кредитом.
+                </p>
+
+                <h3 class="text-center mt-5">Основные факторы влияющие на
+                    величину процентной ставки</h3>
+
+                <ol>
+                    <li>
+                        <strong>Ключевая ставка Центробанка.</strong> Банк
+                        занимает средства у ЦБ по ставке, равной ключевой,
+                        сверху добавляет еще несколько процентов
+                        которые будут являться прибылью банка с Вашего кредита и
+                        дает вам в деньги "в долг" на определённый договором
+                        срок.</li>
+                    <li>
+                        <strong>Тип кредита.</strong> Чем больше риска несет
+                        кредит для банка, тем он дороже. Например, ипотечный
+                        кредит дешевле потребительского
+                        кредита или кредита наличными. Причина проста — при
+                        выдаче ипотеки банк берет в залог недвижимость,
+                        невелируя этим риски
+                        невыплаты кредита. При выдаче кредита наличными на любые
+                        цели у банка нет способа гарантировать возврат, поэтому
+                        ставка гораздо выше.
+                    </li>
+
+                    <li>
+                        <strong>Характиристики заемщика.</strong> Среди них
+                        кредитная история и отношения с банком. Кредитные
+                        организации оценивают надежность
+                        потенциальных заемщиков и делают более выгодные
+                        персональные предложения потенциальным клиентам, в
+                        надежности которых они
+                        уверены. Своим зарплатным клиентам многие банки
+                        предоставляют скидку в размере 0.3 - 0.6 процентных
+                        пункта.
+                    </li>
+                </ol>
+
+            </div>
+        </div>
+
+        <footer class="py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 col-md-2 mb-3">
+                        <h5>Section</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#"
+                                    class="nav-link p-0 text-muted">Home</a></li>
+                            <li class="nav-item mb-2"><a href="#"
+                                    class="nav-link p-0 text-muted">Features</a></li>
+                            <li class="nav-item mb-2"><a href="#"
+                                    class="nav-link p-0 text-muted">Pricing</a></li>
+                            <li class="nav-item mb-2"><a href="#"
+                                    class="nav-link p-0 text-muted">FAQs</a></li>
+                            <li class="nav-item mb-2"><a href="#"
+                                    class="nav-link p-0 text-muted">About</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-6 col-md-2 mb-3">
+                        <h5>Section</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#"
+                                    class="nav-link p-0 text-muted">Home</a></li>
+                            <li class="nav-item mb-2"><a href="#"
+                                    class="nav-link p-0 text-muted">Features</a></li>
+                            <li class="nav-item mb-2"><a href="#"
+                                    class="nav-link p-0 text-muted">Pricing</a></li>
+                            <li class="nav-item mb-2"><a href="#"
+                                    class="nav-link p-0 text-muted">FAQs</a></li>
+                            <li class="nav-item mb-2"><a href="#"
+                                    class="nav-link p-0 text-muted">About</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-6 col-md-2 mb-3">
+                        <h5>Section</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#"
+                                    class="nav-link p-0 text-muted">Home</a></li>
+                            <li class="nav-item mb-2"><a href="#"
+                                    class="nav-link p-0 text-muted">Features</a></li>
+                            <li class="nav-item mb-2"><a href="#"
+                                    class="nav-link p-0 text-muted">Pricing</a></li>
+                            <li class="nav-item mb-2"><a href="#"
+                                    class="nav-link p-0 text-muted">FAQs</a></li>
+                            <li class="nav-item mb-2"><a href="#"
+                                    class="nav-link p-0 text-muted">About</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-5 offset-md-1 mb-3">
+                        <form>
+                            <h5>Subscribe to our newsletter</h5>
+                            <p>Monthly digest of what's new and exciting from
+                                us.</p>
+                            <div
+                                class="d-flex flex-column flex-sm-row w-100 gap-2">
+                                <label for="newsletter1" class="visually-hidden">Email
+                                    address</label>
+                                <input id="newsletter1" type="text"
+                                    class="form-control"
+                                    placeholder="Email address">
+                                <button class="btn btn-primary" type="button">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div
+                    class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+                    <p>&copy; 2022 Company, Inc. All rights reserved.</p>
+                    <ul class="list-unstyled d-flex">
+                        <li class="ms-3"><a class="link-dark" href="#"><svg
+                                    class="bi" width="24" height="24"><use
+                                        xlink:href="#twitter" /></svg></a></li>
+                        <li class="ms-3"><a class="link-dark" href="#"><svg
+                                    class="bi" width="24" height="24"><use
+                                        xlink:href="#instagram" /></svg></a></li>
+                        <li class="ms-3"><a class="link-dark" href="#"><svg
+                                    class="bi" width="24" height="24"><use
+                                        xlink:href="#facebook" /></svg></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
+        <script src="lib/calc.js"></script>
+    </body>
+</html>
